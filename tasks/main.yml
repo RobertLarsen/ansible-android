@@ -1,0 +1,26 @@
+---
+- name: Install Android Studio dependencies
+  become: true
+  apt:
+      name: "{{item}}"
+  with_items:
+      - libc6:i386
+      - libncurses5:i386
+      - libstdc++6:i386
+      - lib32z1
+      - libbz2-1.0:i386
+
+- name: Install Android Studio
+  become: true
+  unarchive:
+      creates: /opt/android-studio
+      dest: /opt/
+      remote_src: yes
+      src: https://dl.google.com/dl/android/studio/ide-zips/3.1.2.0/android-studio-ide-173.4720617-linux.zip
+
+- name: Have Android Studio desktop icon
+  copy:
+      src: Android Studio.desktop
+      dest: "{{ansible_user_dir}}/Desktop"
+      mode: 0770
+
