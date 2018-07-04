@@ -22,7 +22,7 @@
   copy:
       src: Android Studio.desktop
       dest: "{{ansible_user_dir}}/Desktop"
-      mode: 0770
+      mode: 0775
 
 - name: Android SDK tools in PATH
   blockinfile:
