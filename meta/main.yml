@@ -9,3 +9,8 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - yakkety
+  galaxy_tags:
+    - android
+    - development
+    - mobile
+dependencies: []
