@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: android
   author: Robert Larsen <robert@the-playground.dk>
   description: Installs a Android development environment
   company:
