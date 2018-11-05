@@ -2,8 +2,7 @@
 - name: Install Android Studio dependencies
   become: true
   apt:
-      name: "{{item}}"
-  with_items:
+      name:
       - libc6:i386
       - libncurses5:i386
       - libstdc++6:i386
