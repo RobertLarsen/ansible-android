@@ -15,7 +15,7 @@
       creates: /opt/android-studio
       dest: /opt/
       remote_src: yes
-      src: https://dl.google.com/dl/android/studio/ide-zips/3.1.2.0/android-studio-ide-173.4720617-linux.zip
+      src: https://dl.google.com/dl/android/studio/ide-zips/3.5.1.0/android-studio-ide-191.5900203-linux.tar.gz
 
 - name: Have Android Studio desktop icon
   copy:
