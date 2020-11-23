@@ -24,13 +24,6 @@
       mode: 0775
 
 - name: Android SDK tools in PATH
-  blockinfile:
-      dest: "{{ansible_user_dir}}/.bashrc"
-      block: |
-          ANDROID_SDK={{ansible_user_dir}}/Android/Sdk
-          export PATH=$PATH:${ANDROID_SDK}/tools
-          export PATH=$PATH:${ANDROID_SDK}/tools/bin
-          export PATH=$PATH:${ANDROID_SDK}/build-tools/28.0.0-rc2
-          export PATH=$PATH:${ANDROID_SDK}/platform-tools
-          export PATH=$PATH:${ANDROID_SDK}/platform-tools/systrace
-          export PATH=$PATH:${ANDROID_SDK}/emulator
+  template:
+      src: 01-android.conf
+      dest: "{{ user_bashrcd }}/"
