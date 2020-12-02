@@ -13,4 +13,5 @@ galaxy_info:
     - android
     - development
     - mobile
-dependencies: []
+dependencies:
+    - RobertLarsen.base
