@@ -20,7 +20,7 @@
 - name: Have Android Studio desktop icon
   copy:
       src: Android Studio.desktop
-      dest: "{{ansible_user_dir}}/Desktop"
+      dest: "{{ icon_install_path }}"
       mode: 0775
 
 - name: Android SDK tools in PATH
